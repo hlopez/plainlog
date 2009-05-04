@@ -19,6 +19,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
+  config.gem "RedCloth", :version => '4.1.9'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -36,6 +37,11 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
 
   config.action_controller.session_store = :active_record_store
+
+  config.action_controller.session = {
+    :session_key => '_plain_log_session',
+    :secret      => '02e41671620ai2387sdh3s0e375fd2755091e6ff5134c3c23f46eb19465b37613b88d13764e9a127ddc430ff33574fe03009050f4ab0e8'
+  }
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]

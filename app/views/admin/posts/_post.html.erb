@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>
+      <%= post.title %>
+    </td>
+    <td>
+      <%= link_to "Edit", edit_admin_post_path(post) %>
+      <%= link_to "Delete", admin_post_path(post), :method => :delete %>
+    </td>
+  </tr>
+</table>

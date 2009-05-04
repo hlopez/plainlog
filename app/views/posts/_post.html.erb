@@ -1,0 +1,3 @@
+<h1><%= post.title %></h1>
+<%= RedCloth.new(post.content, [:hard_breaks]).to_html %>
+<%= RedCloth.new(post.extended_content, [:hard_breaks]).to_html %>
